@@ -13,6 +13,8 @@
 		AE1989C41A60476400AAA938 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE1989C31A60476400AAA938 /* Images.xcassets */; };
 		AE1989C71A60476400AAA938 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE1989C51A60476400AAA938 /* LaunchScreen.xib */; };
 		AE1989D31A60476400AAA938 /* BlogSplitScreenScrollTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1989D21A60476400AAA938 /* BlogSplitScreenScrollTests.swift */; };
+		AE1989DD1A60485100AAA938 /* BlogText.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1989DC1A60485100AAA938 /* BlogText.swift */; };
+		AE1989DF1A604B1C00AAA938 /* TextFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1989DE1A604B1C00AAA938 /* TextFormatter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		AE1989CC1A60476400AAA938 /* BlogSplitScreenScrollTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlogSplitScreenScrollTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE1989D11A60476400AAA938 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AE1989D21A60476400AAA938 /* BlogSplitScreenScrollTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogSplitScreenScrollTests.swift; sourceTree = "<group>"; };
+		AE1989DC1A60485100AAA938 /* BlogText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlogText.swift; sourceTree = "<group>"; };
+		AE1989DE1A604B1C00AAA938 /* TextFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFormatter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,8 @@
 			children = (
 				AE1989BC1A60476400AAA938 /* AppDelegate.swift */,
 				AE1989BE1A60476400AAA938 /* ViewController.swift */,
+				AE1989DC1A60485100AAA938 /* BlogText.swift */,
+				AE1989DE1A604B1C00AAA938 /* TextFormatter.swift */,
 				AE1989C01A60476400AAA938 /* Main.storyboard */,
 				AE1989C31A60476400AAA938 /* Images.xcassets */,
 				AE1989C51A60476400AAA938 /* LaunchScreen.xib */,
@@ -214,6 +220,8 @@
 			files = (
 				AE1989BF1A60476400AAA938 /* ViewController.swift in Sources */,
 				AE1989BD1A60476400AAA938 /* AppDelegate.swift in Sources */,
+				AE1989DD1A60485100AAA938 /* BlogText.swift in Sources */,
+				AE1989DF1A604B1C00AAA938 /* TextFormatter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,6 +413,7 @@
 				AE1989D81A60476400AAA938 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AE1989D91A60476400AAA938 /* Build configuration list for PBXNativeTarget "BlogSplitScreenScrollTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +422,7 @@
 				AE1989DB1A60476400AAA938 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
