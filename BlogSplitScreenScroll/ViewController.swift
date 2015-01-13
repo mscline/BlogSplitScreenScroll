@@ -15,10 +15,19 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        BlogText.init(title:@"kjh", text:@"lkjl", style:nil, insertInView:self.view)
+
     }
 
 
+    override func viewDidAppear(animated: Bool) {
+
+
+        // create data
+
+
+        // build split screen
+
+    }
 
 }
 

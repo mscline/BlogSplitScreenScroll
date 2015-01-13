@@ -26,14 +26,14 @@ class TextFormatter: NSObject {
         let textAlignmentStyle = nsTextAlignmentStyle ?? NSTextAlignment.Left
 
         // prep work - build font, paragraph style, range
-        let fontX = UIFont(name: theFont, size: theFontSize)!
-        let artStringRange = NSMakeRange(0, artString.length)
+        let fontX = UIFont(name: theFont, size: theFontSize) ?? UIFont(name: "Palatino-Roman", size: 12.0)
+        let artStringRange = NSMakeRange(0, artString.length) ?? NSMakeRange(0, 0)
 
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.alignment = nsTextAlignmentStyle;
 
         // set attributes
-        artString.addAttribute(NSFontAttributeName, value:fontX, range: artStringRange)
+        artString.addAttribute(NSFontAttributeName, value:fontX!, range: artStringRange)
         artString.addAttribute(NSForegroundColorAttributeName, value:fontColor, range: artStringRange)
         artString.addAttribute(NSParagraphStyleAttributeName, value:paragraphStyle, range: artStringRange)
 

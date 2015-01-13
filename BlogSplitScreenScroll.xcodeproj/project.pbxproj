@@ -15,6 +15,8 @@
 		AE1989D31A60476400AAA938 /* BlogSplitScreenScrollTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1989D21A60476400AAA938 /* BlogSplitScreenScrollTests.swift */; };
 		AE1989DD1A60485100AAA938 /* BlogText.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1989DC1A60485100AAA938 /* BlogText.swift */; };
 		AE1989DF1A604B1C00AAA938 /* TextFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1989DE1A604B1C00AAA938 /* TextFormatter.swift */; };
+		AE519B031A65A22500AF8070 /* BlogDataObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE519B021A65A22500AF8070 /* BlogDataObject.swift */; };
+		AE9151DC1A64AD7500829931 /* SplitScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9151DB1A64AD7500829931 /* SplitScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,8 @@
 		AE1989D21A60476400AAA938 /* BlogSplitScreenScrollTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogSplitScreenScrollTests.swift; sourceTree = "<group>"; };
 		AE1989DC1A60485100AAA938 /* BlogText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlogText.swift; sourceTree = "<group>"; };
 		AE1989DE1A604B1C00AAA938 /* TextFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFormatter.swift; sourceTree = "<group>"; };
+		AE519B021A65A22500AF8070 /* BlogDataObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlogDataObject.swift; sourceTree = "<group>"; };
+		AE9151DB1A64AD7500829931 /* SplitScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,11 +87,9 @@
 			children = (
 				AE1989BC1A60476400AAA938 /* AppDelegate.swift */,
 				AE1989BE1A60476400AAA938 /* ViewController.swift */,
-				AE1989DC1A60485100AAA938 /* BlogText.swift */,
-				AE1989DE1A604B1C00AAA938 /* TextFormatter.swift */,
 				AE1989C01A60476400AAA938 /* Main.storyboard */,
-				AE1989C31A60476400AAA938 /* Images.xcassets */,
-				AE1989C51A60476400AAA938 /* LaunchScreen.xib */,
+				AE519B041A65AB0600AF8070 /* SplitScreen */,
+				AE519B051A65AB3D00AF8070 /* Utilities */,
 				AE1989BA1A60476400AAA938 /* Supporting Files */,
 			);
 			path = BlogSplitScreenScroll;
@@ -96,6 +98,8 @@
 		AE1989BA1A60476400AAA938 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				AE1989C31A60476400AAA938 /* Images.xcassets */,
+				AE1989C51A60476400AAA938 /* LaunchScreen.xib */,
 				AE1989BB1A60476400AAA938 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -116,6 +120,24 @@
 				AE1989D11A60476400AAA938 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AE519B041A65AB0600AF8070 /* SplitScreen */ = {
+			isa = PBXGroup;
+			children = (
+				AE519B021A65A22500AF8070 /* BlogDataObject.swift */,
+				AE1989DC1A60485100AAA938 /* BlogText.swift */,
+				AE9151DB1A64AD7500829931 /* SplitScreen.swift */,
+			);
+			name = SplitScreen;
+			sourceTree = "<group>";
+		};
+		AE519B051A65AB3D00AF8070 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				AE1989DE1A604B1C00AAA938 /* TextFormatter.swift */,
+			);
+			name = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,8 +241,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE1989BF1A60476400AAA938 /* ViewController.swift in Sources */,
+				AE519B031A65A22500AF8070 /* BlogDataObject.swift in Sources */,
 				AE1989BD1A60476400AAA938 /* AppDelegate.swift in Sources */,
 				AE1989DD1A60485100AAA938 /* BlogText.swift in Sources */,
+				AE9151DC1A64AD7500829931 /* SplitScreen.swift in Sources */,
 				AE1989DF1A604B1C00AAA938 /* TextFormatter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -344,9 +368,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = BlogSplitScreenScroll/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -354,6 +380,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = BlogSplitScreenScroll/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
