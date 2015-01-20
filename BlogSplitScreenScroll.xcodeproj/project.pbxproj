@@ -16,6 +16,11 @@
 		AE1989DD1A60485100AAA938 /* BlogText.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1989DC1A60485100AAA938 /* BlogText.swift */; };
 		AE1989DF1A604B1C00AAA938 /* TextFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1989DE1A604B1C00AAA938 /* TextFormatter.swift */; };
 		AE519B031A65A22500AF8070 /* BlogDataObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE519B021A65A22500AF8070 /* BlogDataObject.swift */; };
+		AE519B091A65B8B800AF8070 /* SplitScreenWithScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE519B081A65B8B800AF8070 /* SplitScreenWithScroll.swift */; };
+		AE519B461A66E87B00AF8070 /* BlogSplitScreenFacade.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE519B451A66E87B00AF8070 /* BlogSplitScreenFacade.swift */; };
+		AE63E0FD1A6EE7AA00D82D15 /* BlogItemFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE63E0FC1A6EE7AA00D82D15 /* BlogItemFactory.swift */; };
+		AE63E0FF1A6EE83900D82D15 /* Highstrung.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AE63E0FE1A6EE83900D82D15 /* Highstrung.mp3 */; };
+		AE63E1041A6EE86000D82D15 /* MCMusicPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = AE63E1031A6EE86000D82D15 /* MCMusicPlayer.m */; };
 		AE9151DC1A64AD7500829931 /* SplitScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9151DB1A64AD7500829931 /* SplitScreen.swift */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +48,13 @@
 		AE1989DC1A60485100AAA938 /* BlogText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlogText.swift; sourceTree = "<group>"; };
 		AE1989DE1A604B1C00AAA938 /* TextFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFormatter.swift; sourceTree = "<group>"; };
 		AE519B021A65A22500AF8070 /* BlogDataObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlogDataObject.swift; sourceTree = "<group>"; };
+		AE519B081A65B8B800AF8070 /* SplitScreenWithScroll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitScreenWithScroll.swift; sourceTree = "<group>"; };
+		AE519B451A66E87B00AF8070 /* BlogSplitScreenFacade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BlogSplitScreenFacade.swift; path = ../BlogSplitScreenFacade.swift; sourceTree = "<group>"; };
+		AE63E0FC1A6EE7AA00D82D15 /* BlogItemFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlogItemFactory.swift; sourceTree = "<group>"; };
+		AE63E0FE1A6EE83900D82D15 /* Highstrung.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Highstrung.mp3; sourceTree = "<group>"; };
+		AE63E1011A6EE85F00D82D15 /* BlogSplitScreenScroll-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BlogSplitScreenScroll-Bridging-Header.h"; sourceTree = "<group>"; };
+		AE63E1021A6EE86000D82D15 /* MCMusicPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCMusicPlayer.h; sourceTree = "<group>"; };
+		AE63E1031A6EE86000D82D15 /* MCMusicPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCMusicPlayer.m; sourceTree = "<group>"; };
 		AE9151DB1A64AD7500829931 /* SplitScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -85,10 +97,12 @@
 		AE1989B91A60476400AAA938 /* BlogSplitScreenScroll */ = {
 			isa = PBXGroup;
 			children = (
+				AE1989C01A60476400AAA938 /* Main.storyboard */,
 				AE1989BC1A60476400AAA938 /* AppDelegate.swift */,
 				AE1989BE1A60476400AAA938 /* ViewController.swift */,
-				AE1989C01A60476400AAA938 /* Main.storyboard */,
-				AE519B041A65AB0600AF8070 /* SplitScreen */,
+				AE519B451A66E87B00AF8070 /* BlogSplitScreenFacade.swift */,
+				AE519B041A65AB0600AF8070 /* SplitScreenComponents */,
+				AE63E1001A6EE84000D82D15 /* MCMusicPlayer */,
 				AE519B051A65AB3D00AF8070 /* Utilities */,
 				AE1989BA1A60476400AAA938 /* Supporting Files */,
 			);
@@ -122,14 +136,16 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		AE519B041A65AB0600AF8070 /* SplitScreen */ = {
+		AE519B041A65AB0600AF8070 /* SplitScreenComponents */ = {
 			isa = PBXGroup;
 			children = (
-				AE519B021A65A22500AF8070 /* BlogDataObject.swift */,
-				AE1989DC1A60485100AAA938 /* BlogText.swift */,
+				AE519B081A65B8B800AF8070 /* SplitScreenWithScroll.swift */,
 				AE9151DB1A64AD7500829931 /* SplitScreen.swift */,
+				AE1989DC1A60485100AAA938 /* BlogText.swift */,
+				AE63E0FC1A6EE7AA00D82D15 /* BlogItemFactory.swift */,
+				AE519B021A65A22500AF8070 /* BlogDataObject.swift */,
 			);
-			name = SplitScreen;
+			name = SplitScreenComponents;
 			sourceTree = "<group>";
 		};
 		AE519B051A65AB3D00AF8070 /* Utilities */ = {
@@ -138,6 +154,17 @@
 				AE1989DE1A604B1C00AAA938 /* TextFormatter.swift */,
 			);
 			name = Utilities;
+			sourceTree = "<group>";
+		};
+		AE63E1001A6EE84000D82D15 /* MCMusicPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				AE63E1011A6EE85F00D82D15 /* BlogSplitScreenScroll-Bridging-Header.h */,
+				AE63E1021A6EE86000D82D15 /* MCMusicPlayer.h */,
+				AE63E1031A6EE86000D82D15 /* MCMusicPlayer.m */,
+				AE63E0FE1A6EE83900D82D15 /* Highstrung.mp3 */,
+			);
+			name = MCMusicPlayer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -223,6 +250,7 @@
 				AE1989C21A60476400AAA938 /* Main.storyboard in Resources */,
 				AE1989C71A60476400AAA938 /* LaunchScreen.xib in Resources */,
 				AE1989C41A60476400AAA938 /* Images.xcassets in Resources */,
+				AE63E0FF1A6EE83900D82D15 /* Highstrung.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,12 +268,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE63E1041A6EE86000D82D15 /* MCMusicPlayer.m in Sources */,
 				AE1989BF1A60476400AAA938 /* ViewController.swift in Sources */,
 				AE519B031A65A22500AF8070 /* BlogDataObject.swift in Sources */,
+				AE519B461A66E87B00AF8070 /* BlogSplitScreenFacade.swift in Sources */,
 				AE1989BD1A60476400AAA938 /* AppDelegate.swift in Sources */,
 				AE1989DD1A60485100AAA938 /* BlogText.swift in Sources */,
+				AE519B091A65B8B800AF8070 /* SplitScreenWithScroll.swift in Sources */,
 				AE9151DC1A64AD7500829931 /* SplitScreen.swift in Sources */,
 				AE1989DF1A604B1C00AAA938 /* TextFormatter.swift in Sources */,
+				AE63E0FD1A6EE7AA00D82D15 /* BlogItemFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,6 +404,7 @@
 				INFOPLIST_FILE = BlogSplitScreenScroll/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BlogSplitScreenScroll/BlogSplitScreenScroll-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -384,6 +417,7 @@
 				INFOPLIST_FILE = BlogSplitScreenScroll/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BlogSplitScreenScroll/BlogSplitScreenScroll-Bridging-Header.h";
 			};
 			name = Release;
 		};

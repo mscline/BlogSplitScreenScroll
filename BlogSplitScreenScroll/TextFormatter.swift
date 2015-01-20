@@ -11,7 +11,7 @@ import UIKit
 class TextFormatter: NSObject {
 
 
-    class func createAttributedString(text: NSString, withFont: String, fontSize:CGFloat, fontColor:UIColor, nsTextAlignmentStyle:NSTextAlignment) -> (NSAttributedString)
+    class func createAttributedString(text: NSString, withFont: String?, fontSize:CGFloat?, fontColor:UIColor?, nsTextAlignmentStyle:NSTextAlignment?) -> (NSAttributedString)
     {
 
         // create attributed string to work with
@@ -30,11 +30,11 @@ class TextFormatter: NSObject {
         let artStringRange = NSMakeRange(0, artString.length) ?? NSMakeRange(0, 0)
 
         let paragraphStyle = NSMutableParagraphStyle()
-        paragraphStyle.alignment = nsTextAlignmentStyle;
+        paragraphStyle.alignment = textAlignmentStyle;
 
         // set attributes
         artString.addAttribute(NSFontAttributeName, value:fontX!, range: artStringRange)
-        artString.addAttribute(NSForegroundColorAttributeName, value:fontColor, range: artStringRange)
+        artString.addAttribute(NSForegroundColorAttributeName, value:theFontColor, range: artStringRange)
         artString.addAttribute(NSParagraphStyleAttributeName, value:paragraphStyle, range: artStringRange)
 
         return artString;
@@ -55,4 +55,28 @@ class TextFormatter: NSObject {
         return artString;
     
     }
+
+    class func returnHeightOfAttributedStringGivenFixedHeightOrWidth(attributedString attrString: NSAttributedString!, maxWidth:CGFloat!, maxHeight: CGFloat!) -> (CGFloat) {
+
+        let maxWidth = maxWidth
+        let maxHeight = maxHeight
+        var desiredFrameHeight = attrString.boundingRectWithSize(CGSizeMake(maxWidth, maxHeight), options:NSStringDrawingOptions.UsesLineFragmentOrigin, context: nil).size.height
+
+        // ??? NSStringDrawingOptions.UsesLineFragmentOrigin | NSStringDrawingOptions.UsesFontLeading
+
+        return desiredFrameHeight
+    }
+
+    class func printListOfFontFamilyNames(){
+
+        println(UIFont.familyNames())
+
+    }
+
 }
+
+
+
+
+
+
