@@ -67,6 +67,17 @@ class ViewController: UIViewController {
 
         //add data
         facade.updateBlogWithData(arrayOfDataForLeftSide: dataArrayLeft, arrayOfDataForRightSide: dataArrayRight)
+
+        playMusic()
+    }
+
+    var player:MCMusicPlayer = MCMusicPlayer()
+
+    func playMusic(){
+
+        player.songNameAndExtention = "Highstrung.mp3"
+        player.playMusic()
+
     }
 
 }
